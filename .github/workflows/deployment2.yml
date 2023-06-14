@@ -1,0 +1,10 @@
+name: show github info
+on: workflow_dispatch
+jobs:
+  showInfo:
+    runs-on: ubuntu-latest
+    steps:
+      - name: get the code
+        uses: actions/checkout@v3
+      - name: show info
+        run: echo "${{ toJson(github) }}"
